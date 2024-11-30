@@ -1,0 +1,16 @@
+services:
+  app:
+    image: mcr.microsoft.com/devcontainers/python:1-3.12-bullseye
+    volumes:
+      - ../..:/workspaces:cached
+    command: sleep infinity
+    network_mode: service:db
+
+  db:
+    image: mongo:latest
+    restart: unless-stopped
+    volumes:
+      - mongodb-data:/data/db
+
+volumes:
+  mongodb-data:
