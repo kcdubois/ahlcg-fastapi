@@ -10,6 +10,7 @@ readme = "README.md"
 python = "^3.12"
 fastapi = {extras = ["standard"], version = "^0.115.5"}
 pymongo = "^4.10.1"
+pydantic-settings = "^2.6.1"
 
 
 [tool.poetry.group.dev.dependencies]
